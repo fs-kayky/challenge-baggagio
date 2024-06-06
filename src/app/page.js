@@ -1,95 +1,107 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+
+import { useState } from "react";
+import "./styles/imports.css";
+import { Button } from "./components/button/button"
+import { LgButton } from "./components/largeButton/lgButton"
+
 
 export default function Home() {
+
+  const [firstValue, setFirstValue] = useState("");
+  const [operation, setOperation] = useState("");
+  const [secondValue, setSecondValue] = useState("");
+
+
+  const setNumber = (n) => {
+      let number = firstValue + n;
+      setFirstValue(number);
+  }
+
+  const calculate = (operator) => {
+    if(firstValue != '' && secondValue != "") {
+
+      if(operator === "/") {
+        setSecondValue(parseFloat(secondValue) / parseFloat(firstValue))
+      }
+
+      else if(operator === "+") {
+        setSecondValue(parseFloat(secondValue) + parseFloat(firstValue))
+      }
+
+      else if(operator === "-") {
+        setSecondValue(parseFloat(secondValue) - parseFloat(firstValue))
+      }
+
+      else if(operator === "*") {
+        setSecondValue(parseFloat(secondValue) * parseFloat(firstValue))
+      }
+      setOperation(operator);
+      setFirstValue('');
+    } else {
+      setOperation(operator)
+      setSecondValue(firstValue)
+      setFirstValue('')
+    }
+  }
+
+  const clearContent = () => {
+    setFirstValue('')
+    setSecondValue('')
+    setOperation('')
+  }
+
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="content">
+      <div className="calculator">
+        
+        <div className="calculator__header">
+          <p className="calculator__solution">{secondValue}{operation}</p>
+          <p id="cal" className="calculator__equation">{firstValue}</p>
         </div>
+        
+        <div className="calculator__keyboard">
+
+          <div className="calculator__rows">
+            <Button text={'C'} btnBackground= {'#a8a4a4'} onClick={()=> clearContent()}/>
+            <Button text={'pi'} btnBackground= {'#a8a4a4'} onClick={()=> setNumber(3.141592)}/>
+            <Button text={'Del'} btnBackground= {'#a8a4a4'} />
+            <Button text={'/'} btnBackground= {'#E09132'} onClick={()=> calculate('/')} />
+
+          </div>
+
+          <div className="calculator__rows">
+            <Button text={'7'} onClick={()=> setNumber(7)} />
+            <Button text={'8'} onClick={()=> setNumber(8)}/>
+            <Button text={'9'} onClick={()=> setNumber(9)}/>
+            <Button text={'x'} btnBackground= {'#E09132'} onClick={()=> calculate('*')} />
+          </div>
+
+          <div className="calculator__rows">
+            <Button text={'4'} onClick={()=> setNumber(4)}/>
+            <Button text={'5'} onClick={()=> setNumber(5)}/>
+            <Button text={'6'} onClick={()=> setNumber(6)}/>
+            <Button text={'-'} btnBackground= {'#E09132'} onClick={()=> calculate('-')} />
+          </div>
+          <div className="calculator__rows">
+            <Button text={'1'} onClick={()=> setNumber(1)}/>
+            <Button text={'2'} onClick={()=> setNumber(2)}/>
+            <Button text={'3'} onClick={()=> setNumber(3)}/>
+            <Button text={'+'} btnBackground= {'#E09132'} onClick={()=> calculate('+')} />
+          </div>
+
+          <div className="calculator__rows">
+            <LgButton text={'0'} onClick={()=> setNumber(0)}/>
+            <Button text={','} />
+            <Button btnBackground= {'#E09132'} text={'='} />
+
+          </div>
+
+        </div>
+      
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
   );
 }

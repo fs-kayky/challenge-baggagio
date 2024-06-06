@@ -1,0 +1,17 @@
+@import url('./../../styles/variables.css');
+
+.LgButton {
+    height: calc(var(--default-lgButton-size) / 2);
+    width: calc(var(--default-lgButton-size) + 3px);
+
+    font-size: 32px;
+    
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.LgButton:hover {
+    opacity: 0.9;
+}

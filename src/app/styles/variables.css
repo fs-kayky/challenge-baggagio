@@ -1,0 +1,11 @@
+:root {
+    /* colors */
+    --example-color: #ccc;
+
+    /* sizes */
+    --default-button-size: 60px;
+    --default-lgButton-size: 120px;
+
+    --defaul-gray-color: #282424;
+
+}

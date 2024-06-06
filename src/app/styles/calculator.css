@@ -1,0 +1,33 @@
+.calculator {
+    background-color: var(--defaul-gray-color);
+    padding: 26px;
+    border-radius: 32px;
+
+}
+
+.calculator__header {
+    padding-block: 32px;
+    text-align: right;
+    height: 146px;
+}
+
+.calculator__equation {
+    color: #818181;
+    font-size: 24px;
+}
+
+.calculator__equation {
+    color: #fff;
+    font-size: 48px;
+}
+
+.calculator__rows {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 3px;
+}
+
+.calculator__solution {
+    color: #9c9c9c;
+    font-size: 18px;
+}

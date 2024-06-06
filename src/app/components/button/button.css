@@ -1,0 +1,17 @@
+@import url('./../../styles/variables.css');
+
+.button {
+    height: var(--default-button-size);
+    width: var(--default-button-size);
+
+    font-size: 32px;
+    
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
