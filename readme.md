@@ -1,4 +1,4 @@
-# Baggagio Frontend Challenge
+# Desafio Frontend Baggagio
 
 <p align="center">
 	<img alt="Javascript" src="https://img.shields.io/badge/Javascript-0d1b2a?style=for-the-badge&logo=javascript">
@@ -10,3 +10,13 @@
 <h1 align="center">
     <img alt="Calculator" src="https://imgur.com/Ol3x8b0.png" />
 </h1>
+
+<h4 align="center">
+    Calculadora Bagaggio
+</h4>
+
+## Sobre o projeto.
+
+<p> 
+    Calculadora criado para o desafio forntend da <a src="https://www.instagram.com/bagaggio/">Bagaggio</a>. Realizada em Next, com uma interface moderna e minimalista
+</p>
