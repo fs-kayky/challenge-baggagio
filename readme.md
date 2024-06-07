@@ -12,11 +12,35 @@
 </h1>
 
 <h4 align="center">
-    Calculadora Bagaggio
+   💼 Calculadora Bagaggio 💼
 </h4>
 
-## Sobre o projeto.
+## 📄 Sobre o projeto
 
 <p> 
-    Calculadora criado para o desafio forntend da <a src="https://www.instagram.com/bagaggio/">Bagaggio</a>. Realizada em Next, com uma interface moderna e minimalista
+    Calculadora criado para o desafio frontend da Bagaggio. Realizada em NextJs, com uma interface moderna e minimalista.
+    Além de Realizar todas as operações básicas a calculadora conta com um botão Pi, para facilitar calculos mais avançados.
 </p>
+
+# 👨‍💻 Uso da aplicação
+
+🌐 confira o deploy da aplicação: [Calculadora Bagaggio](https://challenge-baggagio.vercel.app)
+
+ou clone o repositório
+
+```bash
+    # Clone o repositorio
+    $ git clone https://github.com/fs-kayky/challenge-baggagio.git
+
+    # Acesse a raiz do projeto
+    $ cd challenge-baggagio
+
+    # Inicie as Dependecias do projeto
+    $ npm i
+
+    # Inicie o servidor de desenvolvimento
+    $ npm run dev
+
+    # Por padrão, a aplicação abre na porta 3000
+    # Abra http://localhost:3000 em seu navegador para visualizar.
+```
