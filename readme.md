@@ -8,5 +8,5 @@
 </p>
 
 <h1 align="center">
-![App Screenshot](https://imgur.com/Ol3x8b0.png)
+    <img alt="Calculator" src="https://imgur.com/Ol3x8b0.png" />
 </h1>
