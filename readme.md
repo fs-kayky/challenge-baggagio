@@ -7,4 +7,6 @@
 	<img alt="NextJS" src = "https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"/>  
 </p>
 
+<h1 align="center">
 ![App Screenshot](https://imgur.com/Ol3x8b0.png)
+</h1>
