@@ -22,6 +22,9 @@
     Além de Realizar todas as operações básicas a calculadora conta com um botão Pi, para facilitar calculos mais avançados.
 </p>
 
+
+
+
 # 👨‍💻 Uso da aplicação
 
 🌐 confira o deploy da aplicação: [Calculadora Bagaggio](https://challenge-baggagio.vercel.app)
@@ -44,3 +47,10 @@ ou clone o repositório
     # Por padrão, a aplicação abre na porta 3000
     # Abra http://localhost:3000 em seu navegador para visualizar.
 ```
+
+# 📚 Stack 📚
+
+- **[React](https://reactjs.org/)**
+- **[CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)**
+- **[Next](https://nextjs.org/docs)**
+- **[JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)**
