@@ -18,12 +18,9 @@
 ## 📄 Sobre o projeto
 
 <p> 
-    Calculadora criado para o desafio frontend da Bagaggio. Realizada em NextJs, com uma interface moderna e minimalista.
+    Calculadora criada para o desafio frontend da Bagaggio. Realizada em React, com uma interface moderna e minimalista.
     Além de Realizar todas as operações básicas a calculadora conta com um botão Pi, para facilitar calculos mais avançados.
 </p>
-
-
-
 
 # 👨‍💻 Uso da aplicação
 
