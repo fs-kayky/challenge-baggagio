@@ -1,9 +1,9 @@
 .calculator {
-    background-color: var(--defaul-gray-color);
+    background-color: var(--dark-gray-color);
     padding: 26px;
     border-radius: 32px;
     overflow: hidden;
-    border: 5px solid gray;
+    border: 5px solid var(--light-gray-color);
 
 }
 
@@ -19,6 +19,7 @@
     font-size: 24px;
 }
 
+
 .calculator__equation {
     color: #fff;
     overflow: hidden;
@@ -28,8 +29,8 @@
 
 .calculator__rows {
     display: flex;
-    gap: 3px;
-    margin-bottom: 3px;
+    gap: 6px;
+    margin-bottom: 6px;
 }
 
 .calculator__solution {

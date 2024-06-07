@@ -108,17 +108,15 @@ export default function Home() {
         
         <div className="calculator__header">
           <p className="calculator__solution">{secondValue} {operation}</p>
-          <p id="cal" className="calculator__equation">{firstValue}</p>
+          <p className="calculator__equation">{firstValue}</p>
         </div>
         
-        
-
         <div className="calculator__keyboard">
 
           <div className="calculator__rows">
             <Button text={'C'} btnBackground= {'#a8a4a4'} onClick={()=> clearContent()}/>
-            <Button text={'pi'} btnBackground= {'#a8a4a4'} onClick={()=> handleClickPi()}/>
-            <Button text={'Del'} btnBackground= {'#a8a4a4'} onClick={()=> clearEntity()}/>
+            <Button text={'π'} btnBackground= {'#a8a4a4'} onClick={()=> handleClickPi()}/>
+            <Button text={'⭠'} btnBackground= {'#a8a4a4'} onClick={()=> clearEntity()}/>
             <Button text={'÷'} btnBackground= {'#E09132'} onClick={()=> handleClickOperator('/')} />
 
           </div>
@@ -145,7 +143,7 @@ export default function Home() {
 
           <div className="calculator__rows">
             <LgButton text={'0'} onClick={()=> setNumber(0)}/>
-            <Button text={','} onClick={()=> setNumber('.')} />
+            <Button text={'.'} onClick={()=> setNumber('.')} />
             <Button btnBackground= {'#E09132'} text={'='} onClick={()=> handleClickEquals()} />
 
           </div>
